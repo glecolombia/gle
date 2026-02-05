@@ -35,22 +35,23 @@ export const Modal: FC<LangInterface> = ({ lang }) => {
             <div className="flex justify-center gap-3 items-center mb-3 max-[550px]:flex-col-reverse">
               <ArrowCta stroke="#D81730" className="w-6 h-4" />
               <h3 className="text-xl text-center font-semibold !leading-5 px-5 font-poppins max-[480px]:text-lg">
-                {lang === 'es'
-                  ? 'Te invitamos a conocer nuestra razón de ser'
-                  : 'We invite you to know our reason for being'}
+                13 años llenos de historias, aprendizajes y momentos
+                inolvidables. <br />
+                Gracias por acompañarnos en cada paso. <br />
+                Este aniversario es de todos.
               </h3>
             </div>
-            <div>
+            <div className="w-2/5 mx-auto max-[600px]:w-full">
               <video
                 autoPlay
-                className="rounded-md w-full aspect-video"
+                className="rounded-md w-full aspect-video shadow-lg"
                 controls
                 onPause={pauseVideo}
                 onPlay={playVideo}
                 ref={videoRef}
               >
                 <source
-                  src="/assets/videos/compensations/home/modal/grupo-logistico-especializado.mp4"
+                  src="/assets/videos/compensations/gle13.mp4"
                   type="video/mp4"
                 />
                 <track kind="captions" src="captions.vtt" label="English" />
@@ -64,7 +65,7 @@ export const Modal: FC<LangInterface> = ({ lang }) => {
                 </button>
               )}
             </div>
-            <div className="flex justify-end">
+            <div className="flex justify-center">
               <button
                 onClick={closeModal}
                 className="flex items-center bg-main-red border border-white gap-3 justify-end mt-9 text-white px-2 py-1 rounded-md"

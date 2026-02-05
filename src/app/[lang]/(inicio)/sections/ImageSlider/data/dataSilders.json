@@ -28,5 +28,15 @@
     "textEn": "Our vision, talent and high-quality service",
     "subtextEs": "hacen parte de su empresa como aliados estratégicos",
     "subtextEn": "can become part of your company through a strategic alliance"
+  },
+  {
+    "id": 4,
+    "idSubtext": 4,
+    "url": "/assets/images/home/slider/cumple.webp",
+    "urlMobile": "/assets/images/home/slider/cumple-mobile.webp",
+    "textEs": "Reduce costos operativos, mejora tiempos de entrega",
+    "textEn": "Reduce operating costs, improve delivery times",
+    "subtextEs": "Todo desde una plataforma segura, escalable y fácil de usar",
+    "subtextEn": "All from a secure, scalable, and easy-to-use platform"
   }
 ]

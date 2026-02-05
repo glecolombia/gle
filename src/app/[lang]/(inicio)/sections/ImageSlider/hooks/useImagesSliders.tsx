@@ -1,5 +1,5 @@
-import { useEffect, useRef, useState } from "react";
-import { ImageData } from "../interfaces/imageSlider";
+import { useEffect, useRef, useState } from 'react';
+import { ImageData } from '../interfaces/imageSlider';
 
 export const useImagesSliders = (images: ImageData[]) => {
   const bannerRef = useRef<HTMLDivElement>(null);
@@ -11,20 +11,27 @@ export const useImagesSliders = (images: ImageData[]) => {
   const [mobileWidth, setMobileWidth] = useState(false);
 
   const redWordsText = [
-    "Servicio",
-    "talento",
-    "mejores",
-    "customized",
-    "partners",
-    "talent",
+    'Servicio',
+    'talento',
+    'mejores',
+    'customized',
+    'partners',
+    'talent',
+    'herramientas',
+    'avanzadas',
+    'advanced',
+    'tools',
   ];
   const redWordsSubtext = [
-    "oportuna",
-    "servicios",
-    "aliados",
-    "indicators",
-    "design",
-    "strategic",
+    'oportuna',
+    'servicios',
+    'aliados',
+    'indicators',
+    'design',
+    'strategic',
+    'plataforma',
+    'segura',
+    'platform',
   ];
 
   const goToNextSlide = () => {
@@ -33,7 +40,7 @@ export const useImagesSliders = (images: ImageData[]) => {
 
   const goToPrevSlide = () => {
     setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length,
     );
   };
 
@@ -62,7 +69,7 @@ export const useImagesSliders = (images: ImageData[]) => {
   }, [currentIndex]);
 
   useEffect(() => {
-    window.addEventListener("resize", () => {
+    window.addEventListener('resize', () => {
       if (window.innerWidth < 450) {
         setMobileWidth(true);
       } else {
@@ -77,7 +84,7 @@ export const useImagesSliders = (images: ImageData[]) => {
     }
 
     return () => {
-      window.removeEventListener("resize", () => setMobileWidth(false));
+      window.removeEventListener('resize', () => setMobileWidth(false));
     };
   }, []);
 
