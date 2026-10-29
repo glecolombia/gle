@@ -5,12 +5,14 @@ interface AttachedLinksProps {
   lang?: string;
   showRates?: boolean;
   showContract?: boolean;
+  showProviders?: boolean;
 }
 
 export const AttachedLinks: FC<AttachedLinksProps> = ({
   lang,
   showRates = false,
   showContract = false,
+  showProviders = false,
 }) => {
   return (
     <div className="flex text-center flex-col gap-2">
@@ -24,6 +26,17 @@ export const AttachedLinks: FC<AttachedLinksProps> = ({
             {lang === 'es'
               ? 'Ver contrato de prestación de servicios de transporte de mensajería expresa'
               : 'See specialized messaging service provision contract'}
+          </Link>
+        )}
+        {showProviders && (
+          <Link
+            href="/assets/documents/providers/Cartilla_Mensajeria_Expresa_GLE.pdf"
+            target="_blank"
+            className="underline underline-offset-8 hover:text-main-red"
+          >
+            {lang === 'es'
+              ? 'Ver cartilla de proveedores de Mensajería Expresa'
+              : 'See Express Messaging providers directory'}
           </Link>
         )}
         {showRates && (

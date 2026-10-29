@@ -155,6 +155,9 @@
         },
         "links": ["See specialized messaging rates", "See prohibited shipments"]
       },
+      "mensajeriaExpresa": {
+        "title": "Express Messaging"
+      },
       "international": {
         "title": "G.L.E. International",
         "sideTextTitle": "We advise you throughout the international delivery process",

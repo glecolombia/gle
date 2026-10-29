@@ -167,6 +167,9 @@
           "Ver envíos no permitidos"
         ]
       },
+      "mensajeriaExpresa": {
+        "title": "Mensajería Expresa"
+      },
       "international": {
         "title": "G.L.E. Internacional",
         "sideTextTitle": "Te asesoramos en todo el proceso de entregas internacionales",

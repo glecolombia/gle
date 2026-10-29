@@ -40,3 +40,6 @@ next-env.d.ts
 
 # react email
 /.react-email/
+
+# assets originales ya convertidos (no desplegar)
+/public/assets/images/nuevos/

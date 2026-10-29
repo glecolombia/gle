@@ -62,6 +62,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/es/servicios/mensajeria-expresa`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/es/proteccion-datos-personales`,
       lastModified: new Date(),
       changeFrequency: "monthly",
@@ -154,6 +160,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/en/services/ecommerce`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/en/services/express-messaging`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,

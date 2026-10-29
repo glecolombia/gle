@@ -30,5 +30,13 @@
     "url": "/assets/images/home/services/ecommerce.webp",
     "linkEs": "/servicios/ecommerce",
     "linkEn": "/services/ecommerce"
+  },
+  {
+    "id": 5,
+    "nameEs": "Mensajería Expresa",
+    "nameEn": "Express Messaging",
+    "url": "/assets/images/home/services/mensajeria-expresa.webp",
+    "linkEs": "/servicios/mensajeria-expresa",
+    "linkEn": "/services/express-messaging"
   }
 ]

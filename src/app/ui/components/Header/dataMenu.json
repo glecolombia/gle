@@ -46,6 +46,14 @@
         "linkSubEs": "/servicios/ecommerce",
         "linkSubEn": "/services/ecommerce",
         "typeSub": "link"
+      },
+      {
+        "idSub": 5,
+        "textSubEs": "Mensajería Expresa",
+        "textSubEn": "Express Messaging",
+        "linkSubEs": "/servicios/mensajeria-expresa",
+        "linkSubEn": "/services/express-messaging",
+        "typeSub": "link"
       }
     ]
   },

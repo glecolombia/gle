@@ -7,12 +7,15 @@ import { AttachedLinks, ButtonQuote } from '@ui/components';
 interface BodyServicesProps {
   additionDescription?: React.ReactNode | string;
   containerImageInfoClass?: string;
+  customImage?: StaticImageData;
   imageInfo: string;
   imageService?: StaticImageData;
   lang: string;
   mainDescription?: React.ReactNode;
   service: string;
   showContract?: boolean;
+  showImage?: boolean;
+  showProviders?: boolean;
   showRates?: boolean;
   sideTextTitle: string;
 }
@@ -20,35 +23,63 @@ interface BodyServicesProps {
 export const BodyServices: FC<BodyServicesProps> = ({
   additionDescription,
   containerImageInfoClass,
+  customImage,
   imageInfo,
   imageService,
   lang = 'es',
   mainDescription,
   service,
   showContract = false,
+  showImage = true,
+  showProviders = false,
   showRates = false,
   sideTextTitle,
 }) => {
   return (
     <div className="relative z-20 mb-32">
-      <div className="flex flex-col mt-14 px-6 max-w-4xl w-full m-auto justify-center font-poppins items-center max-[400px]:mt-5">
-        <div className="text-xl max-[400px]:text-lg">{mainDescription}</div>
-        <div
-          className={`flex justify-center items-center w-full my-20 flex-wrap gap-12 max-[400px]:my-10 ${containerImageInfoClass}`}
-        >
-          <Image
-            alt={imageInfo}
-            className="aspect-square rounded-2xl object-cover"
-            height={390}
-            priority
-            src={imageService as StaticImageData}
-            title={imageInfo}
-            width={411}
-          />
-          <div className="max-w-[24.25rem] w-full border-l-[3px] border-main-red pl-5 text-3xl font-semibold leading-8 max-[400px]:text-xl max-[400px]:leading-6">
-            <h3>{sideTextTitle}</h3>
+      <div
+        className={`flex flex-col ${
+          customImage
+            ? 'mt-4 max-[400px]:mt-3'
+            : 'mt-14 max-[400px]:mt-5'
+        } px-6 max-w-4xl w-full m-auto justify-center font-poppins items-center`}
+      >
+        {mainDescription && (
+          <div className="text-xl max-[400px]:text-lg">{mainDescription}</div>
+        )}
+        {showImage && customImage && (
+          <div className="flex justify-center w-full my-6 max-[400px]:my-4">
+            <div className="w-full rounded-2xl overflow-hidden shadow-card-shadow">
+              <Image
+                alt={imageInfo}
+                className="w-full h-auto"
+                height={customImage.height}
+                priority
+                src={customImage}
+                title={imageInfo}
+                width={customImage.width}
+              />
+            </div>
           </div>
-        </div>
+        )}
+        {showImage && !customImage && (
+          <div
+            className={`flex justify-center items-center w-full my-20 flex-wrap gap-12 max-[400px]:my-10 ${containerImageInfoClass}`}
+          >
+            <Image
+              alt={imageInfo}
+              className="aspect-square rounded-2xl object-cover"
+              height={390}
+              priority
+              src={imageService as StaticImageData}
+              title={imageInfo}
+              width={411}
+            />
+            <div className="max-w-[24.25rem] w-full border-l-[3px] border-main-red pl-5 text-3xl font-semibold leading-8 max-[400px]:text-xl max-[400px]:leading-6">
+              <h3>{sideTextTitle}</h3>
+            </div>
+          </div>
+        )}
         <div className="text-xl max-[400px]:text-lg">{additionDescription}</div>
         <div className="absolute z-auto top-44 left-0 max-[600px]:hidden">
           <ArrowGLE className="h-full w-32 max-[480px]:h-44" />
@@ -58,6 +89,7 @@ export const BodyServices: FC<BodyServicesProps> = ({
           lang={lang}
           showRates={showRates}
           showContract={showContract}
+          showProviders={showProviders}
         />
       </div>
       <div className="absolute bottom-0 back-clip-path-inverse-bottom bg-third-red h-full z-[-1] left-0 right-0" />

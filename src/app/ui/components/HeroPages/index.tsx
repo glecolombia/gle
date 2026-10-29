@@ -10,6 +10,7 @@ interface HeroPagesPropsInterface {
   className?: string;
   color?: 'red' | 'white';
   iconPath?: string | StaticImageData;
+  imageClassName?: string;
   imagePath?: string | StaticImageData;
   imagePathMobile?: string | StaticImageData;
   pageTitle: string;
@@ -21,6 +22,7 @@ export const HeroPages: FC<HeroPagesPropsInterface> = ({
   className,
   color,
   iconPath,
+  imageClassName = 'object-contain w-full max-[500px]:hidden',
   imagePath,
   imagePathMobile = imagePath as StaticImageData,
   pageTitle,
@@ -34,7 +36,7 @@ export const HeroPages: FC<HeroPagesPropsInterface> = ({
           height={800}
           width={1200}
           priority
-          className="object-contain w-full max-[500px]:hidden"
+          className={imageClassName}
         />
       ) : (
         <div className={`h-[15.625rem] w-full max-[400px]:h-[10.625rem]`} />
