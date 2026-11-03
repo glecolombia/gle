@@ -9,6 +9,8 @@ export const GleVideo: FC = () => {
         <video
           className="rounded-2xl w-[45%] max-[1000px]:w-full aspect-video shadow-2xl"
           controls
+          preload="none"
+          poster="/assets/videos/compensations/gle13-poster.webp"
           src="/assets/videos/compensations/gle13.mp4"
         >
           Tu navegador no soporta el elemento de video.

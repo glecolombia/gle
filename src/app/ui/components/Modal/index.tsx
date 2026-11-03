@@ -43,9 +43,10 @@ export const Modal: FC<LangInterface> = ({ lang }) => {
             </div>
             <div className="w-2/5 mx-auto max-[600px]:w-full">
               <video
-                autoPlay
                 className="rounded-md w-full aspect-video shadow-lg"
                 controls
+                preload="none"
+                poster="/assets/videos/compensations/gle13-poster.webp"
                 onPause={pauseVideo}
                 onPlay={playVideo}
                 ref={videoRef}
