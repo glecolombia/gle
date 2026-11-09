@@ -34,7 +34,7 @@ export const International: NextPage<LangInterface> = async ({ lang }) => {
       <BodyServices
         lang={lang}
         mainDescription={
-          <p className="text-center">
+          <p className="text-justify">
             {pages.services.international.mainDescription}
           </p>
         }
