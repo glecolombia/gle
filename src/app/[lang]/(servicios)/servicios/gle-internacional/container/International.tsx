@@ -34,7 +34,9 @@ export const International: NextPage<LangInterface> = async ({ lang }) => {
       <BodyServices
         lang={lang}
         mainDescription={
-          <p>{pages.services.international.mainDescription}</p>
+          <p className="text-center">
+            {pages.services.international.mainDescription}
+          </p>
         }
         imageService={internationalImage}
         containerImageInfoClass="max-[500px]:hidden"
